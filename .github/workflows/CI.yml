@@ -22,7 +22,7 @@ jobs:
       matrix:
         include:
           - build_variant: "mt7621"
-            targets: "SIMAX1800T JCG-Q20"
+            targets: "JCG-AC860M"
     steps:
       - uses: actions/checkout@v2
       - name: Prepare environment
