@@ -16,14 +16,14 @@
 	leds {
 		compatible = "gpio-leds";
 
-		wps {
+		power {
 			label = "power";
 			gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
 		};
 
 		wlan {
 			label = "wlan";
-			gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio0 5 GPIO_ACTIVE_HIGH>;
 		};
 	};
 
@@ -84,7 +84,7 @@
 			};
 
 	  	        partition@140000 {
-			        label = "Firmware_Stub";
+			        label = "firmware";
 			        reg = <0x140000 0x2000000>; /* 32M */
 		        };
 
