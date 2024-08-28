@@ -88,7 +88,7 @@
 			};
 
 			partition@2280000 {
-				label "Storage";
+				label = "Storage";
 				reg = <0x2280000 0x400000>; /* 4096K */
 			};
 
