@@ -22,7 +22,7 @@ jobs:
       matrix:
         include:
           - build_variant: "mt7621"
-            targets: "EA7500"
+            targets: "Linksys-EA7500"
     steps:
       - uses: actions/checkout@v2
       - name: Prepare environment
