@@ -22,7 +22,7 @@ jobs:
       matrix:
         include:
           - build_variant: "mt7621"
-            targets: "Linksys-EA7500 MI-R3P R3P SIMAX1800T"
+            targets: "Linksys-EA7500 MI-R3P-PB MI-R3P-SPI SIMAX1800T"
     steps:
       - uses: actions/checkout@v2
       - name: Prepare environment
