@@ -64,17 +64,17 @@
 
 			partition@0 {
 				label = "Bootloader";
-				reg = <0x00000 0x0060000>;/* 256k */
+				reg = <0x00000 0x0050000>;/* 256k */
 			};
 
-			partition@60000 {
+			partition@50000 {
 				label = "BootEnv";
-				reg = <0x60000 0x0040000>;/* 256k */			
+				reg = <0x50000 0x0040000>;/* 256k */			
 			};
       
-			partition@a0000 {
+			partition@90000 {
 				label = "Config";
-				reg = <0xa0000 0x0060000>;/* 512k */
+				reg = <0x90000 0x0070000>;/* 512k */
 			};
 
 			partition@100000 {
