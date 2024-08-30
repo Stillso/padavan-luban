@@ -64,17 +64,12 @@
 
 			partition@0 {
 				label = "Bootloader";
-				reg = <0x00000 0x0050000>;/* 256k */
-			};
-
-			partition@50000 {
-				label = "BootEnv";
-				reg = <0x50000 0x0040000>;/* 256k */			
+				reg = <0x00000 0x0080000>;/* 256k */
 			};
       
-			partition@90000 {
+			partition@80000 {
 				label = "Config";
-				reg = <0x90000 0x0070000>;/* 512k */
+				reg = <0x80000 0x0080000>;/* 512k */
 			};
 
 			partition@100000 {
@@ -83,7 +78,7 @@
 			};
 
 	  	        partition@140000 {
-			        label = "Firmware_Stub";
+			        label = "firmware";
 			        reg = <0x140000 0x2000000>; /* 32M */
 		        };
 
