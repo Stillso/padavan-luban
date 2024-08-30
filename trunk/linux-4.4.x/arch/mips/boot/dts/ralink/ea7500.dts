@@ -64,45 +64,40 @@
 
 			partition@0 {
 				label = "Bootloader";
-				reg = <0x00000 0x80000>; /* 512k */
+				reg = <0x00000 0x0060000>;/* 256k */
 			};
 
-			partition@80000 {
-				label = "CFG_Bdata";
-				reg = <0x80000 0x80000>; /* 512k */
+			partition@60000 {
+				label = "BootEnv";
+				reg = <0x60000 0x0040000>;/* 256k */			
+			};
+      
+			partition@a0000 {
+				label = "Config";
+				reg = <0xa0000 0x0060000>;/* 512k */
 			};
 
 			partition@100000 {
 				label = "Factory";
-				reg = <0x100000 0x80000>; /* 512k */
+				reg = <0x100000 0x0040000>;/* 256k */
 			};
 
-			partition@180000 {
-				label = "Crash";
-				reg = <0x180000 0x80000>; /* 512k */
-			};
+	  	        partition@140000 {
+			        label = "Firmware_Stub";
+			        reg = <0x140000 0x2000000>; /* 32M */
+		        };
 
-			partition@200000 {
-				label = "firmware";
-				reg = <0x200000 0x2000000>; /* 32M */
-			};
+		        partition@2140000 {
+			        label = "Storage";
+			        reg = <0x2140000 0x400000>; /* 4096K */
+		        };
 
-			partition@2200000 {
-				label = "Config";
-				reg = <0x2200000 0x80000>; /* 512K */
-			};
-
-			partition@2280000 {
-				label = "Storage";
-				reg = <0x2280000 0x400000>; /* 4096K */
-			};
-
-			partition@2680000 {
-				label = "RWFS";
-				reg = <0x2680000 0x5900000>;
-			};
-
-			partition@all {
+		        partition@2540000 {
+			        label = "RWFS";
+			        reg = <0x2540000 0x5A40000>;
+		        }; 
+	    
+	                partition@all {
 				label = "ALL";
 				reg = <0x0 0x7f80000>;
 			};
